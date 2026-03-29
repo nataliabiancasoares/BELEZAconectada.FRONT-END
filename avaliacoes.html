@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Avaliações</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Beleza Conectada</h1>
+<h2>Avaliações</h2>
+
+<input type="text" id="nome" placeholder="Seu nome">
+
+<select id="nota">
+<option value="5">⭐ 5 - Excelente</option>
+<option value="4">⭐ 4 - Muito bom</option>
+<option value="3">⭐ 3 - Bom</option>
+<option value="2">⭐ 2 - Ruim</option>
+<option value="1">⭐ 1 - Péssimo</option>
+</select>
+
+<textarea id="comentario" placeholder="Escreva sua avaliação"></textarea>
+
+<button id="enviar">Enviar avaliação</button>
+
+<div id="lista-avaliacoes"></div>
+<div id"conteudo></div>
+
+</div>
+
+<script src="avaliacoes.js"></script>
+
+<script type="module">
+
+import { salvarAvaliacao } from './dados.js';
+
+window.avaliar = function(){
+
+const nota = document.getElementById("nota").value;
+
+salvarAvaliacao(nota);
+
+alert("Avaliação enviada!");
+
+}
+
+</script>
+
+</body>
+</html>

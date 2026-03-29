@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Beleza Conectada</title>
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<script>
+function mostrar(tipo){
+
+const conteudo = document.getElementById("conteudo")
+
+if(tipo === "maquiagem"){
+conteudo.innerHTML = `
+<h3>Tendências de Maquiagem</h3>
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
+<img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8">
+<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348">
+`
+}
+
+if(tipo === "cabelo"){
+conteudo.innerHTML = `
+<h3>Tendências de Cabelo</h3>
+<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e">
+<img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e">
+<img src="https://images.unsplash.com/photo-1523263685509-57c1d050d19b">
+`
+}
+
+if(tipo === "estetica"){
+conteudo.innerHTML = `
+<h3>Estética</h3>
+<img src="https://images.unsplash.com/photo-1556228720-195a672e8a03">
+<img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b">
+<img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2">
+`
+}
+
+if(tipo === "unhas"){
+conteudo.innerHTML = `
+<h3>Tendências de Unhas</h3>
+<img src="https://images.unsplash.com/photo-1604654894610-df63bc536371">
+<img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc">
+<img src="https://images.unsplash.com/photo-1585386959984-a4155224a1a8">
+`
+}
+
+}
+</script>
+<body>
+
+<div class="container">
+
+<h1>Beleza Conectada</h1>
+
+<input type="text" placeholder="Pesquisar tendências...">
+
+<img src="https://i.imgur.com/8Km9tLL.png" class="banner">
+
+<h2>Tendências</h2>
+
+<div class="categorias">
+<button onclick="mostrar('maquiagem')">Maquiagem</button>
+<button onclick="mostrar('cabelo')">Cabelo</button>
+<button onclick="mostrar('estetica')">Estética</button>
+<button onclick="mostrar('unhas')">Unhas</button>
+</div>
+
+<div class="botoes">
+        <button id="btnAvaliacoes">Avaliações</button>
+</div>
+<div id="conteudo"></div>
+
+</div>
+
+<script>
+function mostrar(tipo){
+const conteudo = document.getElementById("conteudo")
+
+if(tipo === "maquiagem"){
+conteudo.innerHTML = `
+<h3>Tipos de Maquiagem</h3>
+<p>Maquiagem Natural</p>
+<img src="imagens/maquiagem-natural.jpg">
+
+<p>Maquiagem Glam</p>
+<img src="imagens/maquiagem-glam.jpg">
+
+<p>Maquiagem Colorida</p>
+<img src="imagens/maquiagem-colorida.jpg">
+`
+}
+
+if(tipo === "cabelo"){
+conteudo.innerHTML = `
+<h3>Penteados</h3>
+<p>Trança Nagô</p>
+<img src="imagens/tranca-nago.jpg">
+
+<p>Coque</p>
+<img src="imagens/coque.jpg">
+
+<p>Rabo de Cavalo</p>
+<img src="imagens/rabo-cavalo.jpg">
+`
+}
+
+if(tipo === "unhas"){
+conteudo.innerHTML = `
+<h3>Tipos de Unhas</h3>
+<p>Francesinha</p>
+<img src="imagens/unha-francesinha.jpg">
+
+<p>Unha Decorada</p>
+<img src="imagens/unha-decorada.jpg">
+
+<p>Unha Lisa</p>
+<img src="imagens/unha-lisa.jpg">
+`
+}
+
+if(tipo === "estetica"){
+conteudo.innerHTML = `
+<h3>Estética</h3>
+<p>Creme Facial</p>
+<img src="imagens/creme.jpg">
+
+<p>Skincare</p>
+<img src="imagens/skincare.jpg">
+
+<p>Produtos Estéticos</p>
+<img src="imagens/produtos-estetica.jpg">
+`
+}
+}
+</script>
+
+<script src="home.js"></script>
+
+</body>
+</html>
